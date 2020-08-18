@@ -4,6 +4,7 @@ pipeline{
     }
     environment {
         APP_VERSION = "1.0"
+        SSH=CREDENTIAL("ssh-CENTOS")
     }
     
     stages{
