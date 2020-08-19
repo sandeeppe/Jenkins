@@ -30,7 +30,7 @@ pipeline{
         }
         
             
-        }
+    
         stage('Input') {
             input {
                 message "Should we continue?"
@@ -51,6 +51,7 @@ pipeline{
             steps {
                 sh "mvn --version"
             }
+        }    
 
     }
 }   
