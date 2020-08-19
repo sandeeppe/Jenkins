@@ -21,13 +21,13 @@
                 stages {
                     stage('Build') {
                         steps {
-                            echo "Do Build for ${PLATFORM} - ${BROWSER}
+                            echo "Do Build for ${PLATFORM} - ${BROWSER}"
                         }
                     }
                     stage('Test') {
                         steps {
                             echo "Do Test for ${PLATFORM} - ${BROWSER}"
-                            
+
                         }
                     }
                 }
