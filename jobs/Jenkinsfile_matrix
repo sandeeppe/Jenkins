@@ -18,6 +18,7 @@
                         values '32-bit', '64-bit'
                     }
                 }
+               
                 stages {
                     stage('Build') {
                         steps {
@@ -31,4 +32,7 @@
                         }
                     }
                 }
-            }       
+            }
+        }           
+     }
+ }         
