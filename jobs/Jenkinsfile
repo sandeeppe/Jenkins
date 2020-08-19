@@ -52,18 +52,19 @@ pipeline{
                 sh 'mvn --version'
             }
         } 
-        stage('Example Deploy') {
-            agent {
-                label "some-label"
-            }
+       stage('Example Deploy') {
             when {
-                //beforeAgent true
+               // beforeInput true
                 branch 'production'
+            }
+            input {
+                message "Deploy to production?"
+                id "simple-input"
             }
             steps {
                 echo 'Deploying'
             }
-        }   
+        }
 
     }
 }   
