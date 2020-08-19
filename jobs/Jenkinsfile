@@ -28,7 +28,10 @@ pipeline{
             }
             
         }
-        stage("Maven Version"){
+        stage(" Skip Maven "){
+            when {
+                environment name: 'CHOICE', value: 'One'
+            }
             steps {
                 sh "mvn --version"
             }
