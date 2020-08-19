@@ -49,7 +49,7 @@ pipeline{
                 environment name: 'CHOICE', value: 'One'
             }
             steps {
-                sh "mvn --version"
+                sh 'mvn --version'
             }
         }    
 
