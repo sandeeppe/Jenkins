@@ -51,7 +51,19 @@ pipeline{
             steps {
                 sh 'mvn --version'
             }
-        }    
+        } 
+        stage('Example Deploy') {
+            agent {
+                label "some-label"
+            }
+            when {
+                //beforeAgent true
+                branch 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }   
 
     }
 }   
