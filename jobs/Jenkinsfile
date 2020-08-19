@@ -28,13 +28,7 @@ pipeline{
             }
             
         }
-        stage(" Skip Maven "){
-            when {
-                environment name: 'CHOICE', value: 'One'
-            }
-            steps {
-                sh "mvn --version"
-            }
+        
             
         }
         stage('Input') {
@@ -50,5 +44,13 @@ pipeline{
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
+        stage(" Skip Maven "){
+            when {
+                environment name: 'CHOICE', value: 'One'
+            }
+            steps {
+                sh "mvn --version"
+            }
+
     }
 }   
